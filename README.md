@@ -2,28 +2,22 @@
 
 Python PDF reader and document-ingestion utilities.
 
-## Ancient Script Scanner integration
+## Ancient Script + Historical Object integration
 
-`ancient_script_ingest.py` renders a selected PDF page to an image and creates a provenance-preserving evidence record for the Ancient Script Scanner maintained in `amerhwitat/nlp`.
+- `ancient_script_ingest.py` renders a selected PDF page into an evidence image for the Ancient Script Scanner.
+- `ancient_object_catalog_bridge.py` renders a page and creates a provenance-preserving object record compatible with `amerhwitat/nlp/ancient_objects_db.py`.
 
 Example:
 
 ```bash
 python ancient_script_ingest.py inscription.pdf --page 1 --output scan.json
+python ancient_object_catalog_bridge.py artifact.pdf --page 2 --period iron_age --output object.json
 ```
 
-The originating PDF and page number remain part of the evidence record. Recognition and translation are handled by the scanner/research workflow and must remain human-reviewed.
+The originating PDF, page number, local image path and source metadata remain part of the record. Recognition, transliteration and translation remain human-reviewed research fields.
 
 ## Dependencies
 
-Windows:
-
 ```bash
 pip install PyMuPDF Pillow
-```
-
-Linux:
-
-```bash
-pip3 install PyMuPDF Pillow
 ```
