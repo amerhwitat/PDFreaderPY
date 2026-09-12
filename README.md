@@ -8,6 +8,10 @@ Python PDF reader and document-ingestion utilities.
 - `ancient_object_catalog_bridge.py` renders a page and creates a provenance-preserving object record compatible with `amerhwitat/nlp/ancient_objects_db.py`.
 - The Thamudic platform is now Python-first: PDFreaderPY remains the ingestion boundary while the shared SQLite database is consumed by the Tkinter desktop and Flask web application in `amerhwitat/nlp`.
 
+## Chimera 128D + P2P integration
+
+Ingested documents and extracted evidence may be represented as Chimera multidimensional objects with geometry/page coordinates, time/provenance, observer perspective, events, object properties and extensible vector state. `chimera/p2p_protocol.json` provides the common authenticated peer-to-peer envelope for optional research-node synchronization. Original document bytes and provenance remain local unless explicitly shared.
+
 Example:
 
 ```bash
@@ -32,3 +36,7 @@ The canonical application layer is maintained in `amerhwitat/nlp`:
 - `thamudic_desktop.py` — professional desktop workbench
 - `thamudic_web_app.py` — Python web UI/API
 - `run_thamudic.py` — unified launcher
+
+## License
+
+Original project code is released under the GNU General Public License v3 or later. Third-party dependencies retain their own licenses.
