@@ -2,15 +2,18 @@
 
 Python PDF reader and document-ingestion utilities.
 
-## Source-code citation index
+## Complete source-code citation index
 
-The executable/reference source is explicitly cited below:
+| Area | Source |
+|---|---|
+| PDF/document ingestion | [ancient_script_ingest.py](ancient_script_ingest.py) |
+| Ancient object catalog bridge | [ancient_object_catalog_bridge.py](ancient_object_catalog_bridge.py) |
+| Document-processing source tree | [repository root](.) |
+| Chimera P2P contract | [chimera/p2p_protocol.json](chimera/p2p_protocol.json) |
+| Apple implementation | [apple/](apple/) |
+| Complete tracked repository | [source tree](.) |
 
-- [PDF/document ingestion](ancient_script_ingest.py)
-- [Ancient object catalog bridge](ancient_object_catalog_bridge.py)
-- [PDF/document processing modules](.)
-- [Chimera P2P contract](chimera/p2p_protocol.json)
-- [Centralized Apple Objective-C + Flutter implementation](https://github.com/amerhwitat/general/tree/master/Apple-Implementations/PDFreaderPY)
+The table is the README-level citation index for all maintained code; individual modules remain linked from their containing directories and are the source of record.
 
 ## Centralized Apple Objective-C + Flutter implementation
 
