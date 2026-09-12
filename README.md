@@ -2,6 +2,16 @@
 
 Python PDF reader and document-ingestion utilities.
 
+## Source-code citation index
+
+The executable/reference source is explicitly cited below:
+
+- [PDF/document ingestion](ancient_script_ingest.py)
+- [Ancient object catalog bridge](ancient_object_catalog_bridge.py)
+- [PDF/document processing modules](.)
+- [Chimera P2P contract](chimera/p2p_protocol.json)
+- [Centralized Apple Objective-C + Flutter implementation](https://github.com/amerhwitat/general/tree/master/Apple-Implementations/PDFreaderPY)
+
 ## Centralized Apple Objective-C + Flutter implementation
 
 The Apple companion is maintained in [`general/Apple-Implementations/PDFreaderPY`](https://github.com/amerhwitat/general/tree/master/Apple-Implementations/PDFreaderPY). It provides an Objective-C/Xcode native shell and Flutter iOS/macOS UI. Python/PyMuPDF processing remains behind a native/service boundary instead of being incorrectly treated as automatically embedded in an IPA.
@@ -10,7 +20,7 @@ The Apple companion is maintained in [`general/Apple-Implementations/PDFreaderPY
 
 - `ancient_script_ingest.py` renders a selected PDF page into an evidence image for the Ancient Script Scanner.
 - `ancient_object_catalog_bridge.py` renders a page and creates a provenance-preserving object record compatible with `amerhwitat/nlp/ancient_objects_db.py`.
-- The Thamudic platform is now Python-first: PDFreaderPY remains the ingestion boundary while the shared SQLite database is consumed by the Tkinter desktop and Flask web application in `amerhwitat/nlp`.
+- The Thamudic platform is Python-first: PDFreaderPY remains the ingestion boundary while the shared SQLite database is consumed by the Tkinter desktop and Flask web application in `amerhwitat/nlp`.
 
 ## Apple applications
 
