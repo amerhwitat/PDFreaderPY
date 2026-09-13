@@ -1,0 +1,7 @@
+services:
+  app:
+    build: .
+    image: amerhwitat/pdfreaderpy:local
+    container_name: pdfreaderpy
+    ports: ["8000:8000"]
+    init: true
