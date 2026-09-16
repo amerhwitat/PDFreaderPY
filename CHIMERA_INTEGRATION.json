@@ -1,0 +1,1 @@
+{"$schema":"CHM-APP-INTEGRATION-1","application":"PDFreaderPY","target":"Chimera II OS","integration_points":["Aurora document tools","Nucleus/Hive","Chimera Package Manager"],"purpose":"Expose PDF/document reading capabilities through Aurora."}
