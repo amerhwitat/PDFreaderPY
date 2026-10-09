@@ -8,13 +8,9 @@ From this directory:
 
 ```sh
 mvn package
-java -cp "target/classes:target/dependency/*" io.amerhwitat.pdfreader.PdfPageIngest inscription.pdf --page 1 --image page-1.png --output scan.json
-```
-
-On Windows, use `; ` instead of `:` in the runtime classpath. To run directly with Maven dependencies without manually assembling a classpath, use:
-
-```sh
-mvn org.codehaus.mojo:exec-maven-plugin:3.5.0:java -Dexec.mainClass=io.amerhwitat.pdfreader.PdfPageIngest -Dexec.args="inscription.pdf --page 1 --image page-1.png --output scan.json"
+mvn org.codehaus.mojo:exec-maven-plugin:3.5.0:java \
+  -Dexec.mainClass=io.amerhwitat.pdfreader.PdfPageIngest \
+  -Dexec.args="inscription.pdf --page 1 --image page-1.png --output scan.json"
 ```
 
 ## Scope and parity boundary
