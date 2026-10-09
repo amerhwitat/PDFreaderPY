@@ -12,6 +12,9 @@ class TestParallelSearch(unittest.TestCase):
     def test_empty_query_returns_no_matches(self):
         self.assertEqual(search_pages_parallel(["alpha"], ""), [])
 
+    def test_whitespace_query_returns_no_matches(self):
+        self.assertEqual(search_pages_parallel(["alpha"], "   "), [])
+
 
 if __name__ == "__main__":
     unittest.main()
