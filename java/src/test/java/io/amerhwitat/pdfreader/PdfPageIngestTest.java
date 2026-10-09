@@ -57,4 +57,22 @@ final class PdfPageIngestTest {
         assertThrows(java.io.IOException.class,
             () -> PdfPageIngest.main(new String[] {missing.toString()}));
     }
+    @Test
+    void escapesSpecialCharactersInEvidencePaths() throws Exception {
+        Path pdf = tempDir.resolve("quoted\"file.pdf");
+        try (PDDocument document = new PDDocument()) {
+            document.addPage(new PDPage());
+            document.save(pdf.toFile());
+        }
+
+        Path image = tempDir.resolve("quoted-page.png");
+        Path evidence = tempDir.resolve("quoted-evidence.json");
+        PdfPageIngest.main(new String[] {
+            pdf.toString(), "--image", image.toString(), "--output", evidence.toString()
+        });
+
+        String json = Files.readString(evidence);
+        assertTrue(json.contains("quoted\\\"file.pdf"));
+    }
+
 }
