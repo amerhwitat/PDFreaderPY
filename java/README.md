@@ -13,6 +13,18 @@ mvn org.codehaus.mojo:exec-maven-plugin:3.5.0:java \
   -Dexec.args="inscription.pdf --page 1 --image page-1.png --output scan.json"
 ```
 
+## Native GUI
+
+Launch the desktop reader with a JDK 17+ and Maven:
+
+```sh
+mvn package
+mvn org.codehaus.mojo:exec-maven-plugin:3.5.0:java \\
+  -Dexec.mainClass=io.amerhwitat.pdfreader.PdfReaderGui
+```
+
+The Swing UI opens a PDF using a file chooser, lets the user select a page, and renders the page asynchronously with PDFBox. The GUI is a native desktop application; it does not run inside static GitHub Pages.
+
 ## Scope and parity boundary
 
 - Validates the requested one-based page number and input PDF.
