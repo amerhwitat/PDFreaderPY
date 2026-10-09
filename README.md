@@ -42,3 +42,15 @@ pip install PyMuPDF Pillow
 ## License
 
 Original project code is released under the GNU General Public License v3 or later. Third-party dependencies retain their own licenses.
+## Java ingestion module
+
+A Java 17+ PDF page-rendering/evidence module lives in [java/](java/). It renders a selected one-based page to PNG and writes a provenance record; it deliberately marks OCR as `not-run` until a scanner adapter is configured. The Java module is covered by a dedicated GitHub Actions workflow and JUnit fixture tests.
+
+Run locally:
+
+```bash
+cd java
+mvn --batch-mode clean verify
+```
+
+This is an incremental parity port of the PDF rendering/evidence stage, not a replacement for the full Python ingestion and OCR pipeline.
