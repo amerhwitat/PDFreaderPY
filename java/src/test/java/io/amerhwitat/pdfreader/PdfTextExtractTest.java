@@ -10,6 +10,7 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
+import org.apache.pdfbox.pdmodel.font.Standard14Fonts;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
@@ -50,7 +51,7 @@ class PdfTextExtractTest {
         doc.addPage(page);
         try (PDPageContentStream stream = new PDPageContentStream(doc, page)) {
             stream.beginText();
-            stream.setFont(PDType1Font.HELVETICA, 12);
+            stream.setFont(new PDType1Font(Standard14Fonts.FontName.HELVETICA), 12);
             stream.newLineAtOffset(50, 700);
             stream.showText(text);
             stream.endText();
