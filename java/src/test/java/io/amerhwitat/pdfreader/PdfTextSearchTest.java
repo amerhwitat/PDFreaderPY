@@ -24,7 +24,7 @@ class PdfTextSearchTest {
   assertEquals(1,PdfTextSearch.search(pdf,"Alpha",true).size());
  }
  @Test void validatesQueryAndInput() {
-  assertThrows(IllegalArgumentException.class,()->PdfTextSearch.search(tempDir.resolve("missing.pdf"),"x",false));
+  assertThrows(IOException.class,()->PdfTextSearch.search(tempDir.resolve("missing.pdf"),"x",false));
   assertThrows(IllegalArgumentException.class,()->PdfTextSearch.search(Path.of("missing.pdf"),"  ",false));
  }
  @Test void jsonLinesEscapeTextAndRetainPageMetadata() {
