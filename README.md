@@ -54,3 +54,10 @@ mvn --batch-mode clean verify
 ```
 
 This is an incremental parity port of the PDF rendering/evidence stage, not a replacement for the full Python ingestion and OCR pipeline.
+
+
+## Browser-native PDF reader
+
+A browser-only reader is published at [PDFreaderPY Web](https://amerhwitat.github.io/apps/pdf-reader/index.html). It processes the selected PDF locally in the browser and provides page navigation, zoom, embedded-text search, metadata inspection, and text export. It does not upload the selected file. The browser port uses PDF.js from a public CDN; scanned pages still require a separate OCR pipeline.
+
+This browser UI is a parity subset for the desktop reader's navigation/search workflows. The Python PyMuPDF ingestion bridges and provenance-preserving ancient-script/object integrations remain separate Python capabilities.
